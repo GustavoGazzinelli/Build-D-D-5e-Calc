@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\FichaRPG2\bin\Debug\net8.0-windows\FichaRPG2.exe
+C:\Users\User\source\repos\FichaRPG2\bin\Debug\net8.0-windows\FichaRPG2.deps.json
+C:\Users\User\source\repos\FichaRPG2\bin\Debug\net8.0-windows\FichaRPG2.runtimeconfig.json
+C:\Users\User\source\repos\FichaRPG2\bin\Debug\net8.0-windows\FichaRPG2.dll
+C:\Users\User\source\repos\FichaRPG2\bin\Debug\net8.0-windows\FichaRPG2.pdb
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.Form1.resources
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.csproj.GenerateResource.cache
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.AssemblyInfo.cs
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.dll
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\refint\FichaRPG2.dll
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.pdb
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\FichaRPG2.genruntimeconfig.cache
+C:\Users\User\source\repos\FichaRPG2\obj\Debug\net8.0-windows\ref\FichaRPG2.dll
