@@ -7,30 +7,18 @@ namespace FichaRPG2
         public Form1()
         {
             InitializeComponent();
-        }
 
-        private void atualizarBarra(object sender, EventArgs e)
-        {
-            int soma = (int)(STR.Value + DEX.Value + CONS.Value + INT.Value + SAB.Value + CHA.Value);
-            labelLimite.Text = soma.ToString() + "/" + Limite.Maximum.ToString();
-
-            if (soma > 69)
-            {
-                soma = Limite.Maximum;
-            }
-
-            Limite.Value = soma;
+            STR.ValueChanged += STR_ValueChanged;
+            DEX.ValueChanged += STR_ValueChanged;
+            CONS.ValueChanged += STR_ValueChanged;
+            INT.ValueChanged += STR_ValueChanged;
+            SAB.ValueChanged += STR_ValueChanged;
+            CHA.ValueChanged += STR_ValueChanged;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            labelLimite.Text = ((int)(STR.Value + DEX.Value + CONS.Value + INT.Value + SAB.Value + CHA.Value)).ToString() + "/" + Limite.Maximum;
-            STR.ValueChanged += atualizarBarra;
-            DEX.ValueChanged += atualizarBarra;
-            CONS.ValueChanged += atualizarBarra;
-            INT.ValueChanged += atualizarBarra;
-            SAB.ValueChanged += atualizarBarra;
-            CHA.ValueChanged += atualizarBarra;
+
         }
 
         private void Classe_SelectedIndexChanged(object sender, EventArgs e)
@@ -463,7 +451,7 @@ namespace FichaRPG2
             int pPersua = int.Parse(modCHA.Text);
             int pReligi = int.Parse(modINT.Text);
             int pSlei = int.Parse(modDEX.Text);
-            int pStealth= int.Parse(modDEX.Text);
+            int pStealth = int.Parse(modDEX.Text);
             int pSurvival = int.Parse(modSAB.Text);
 
 
@@ -486,7 +474,7 @@ namespace FichaRPG2
             }
             if (checkBoxDeception.Checked)
             {
-                pDecep +=   pro;
+                pDecep += pro;
             }
             if (checkBoxHistory.Checked)
             {
@@ -559,6 +547,57 @@ namespace FichaRPG2
             sleight.Text = pSlei.ToString();
             stealth.Text = pStealth.ToString();
             survival.Text = pSurvival.ToString();
+        }
+
+        private void custoPontos()
+        {
+            NumericUpDown[] attributes = new NumericUpDown[]
+            {
+            STR,
+            DEX,
+            CONS,
+            INT,
+            SAB,
+            CHA
+            };
+
+            int custo = 0;
+
+            foreach (var attribute in attributes)
+            {
+                int value = (int)attribute.Value;
+                custo += calcularCusto(value);
+            }
+
+            labelLimite.Text = custo.ToString() + "/27";
+
+            if (custo > 27)
+            {
+                labelLimite.ForeColor = Color.Red; 
+            }
+            else
+            {
+                labelLimite.ForeColor = Color.Black; 
+            }
+        }
+
+        private int calcularCusto(int value)
+        {
+            if (value == 8) return 0;
+            if (value == 9) return 1;
+            if (value == 10) return 2;
+            if (value == 11) return 3;
+            if (value == 12) return 4;
+            if (value == 13) return 5;
+            if (value == 14) return 7;
+            if (value == 15) return 9;
+
+            return 0; 
+        }
+
+        private void STR_ValueChanged(object sender, EventArgs e)
+        {
+            custoPontos();
         }
     }
 }

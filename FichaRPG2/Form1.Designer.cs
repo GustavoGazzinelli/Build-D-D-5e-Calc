@@ -71,7 +71,6 @@
             modINT = new Label();
             modSAB = new Label();
             modCHA = new Label();
-            Limite = new ProgressBar();
             label3 = new Label();
             checkSTR = new CheckBox();
             checkDEX = new CheckBox();
@@ -139,6 +138,7 @@
             STR.Size = new Size(51, 23);
             STR.TabIndex = 0;
             STR.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            STR.ValueChanged += STR_ValueChanged;
             // 
             // DEX
             // 
@@ -247,11 +247,11 @@
             // labelLimite
             // 
             labelLimite.AutoSize = true;
-            labelLimite.Location = new Point(119, 375);
+            labelLimite.Location = new Point(111, 366);
             labelLimite.Name = "labelLimite";
-            labelLimite.Size = new Size(36, 15);
+            labelLimite.Size = new Size(30, 15);
             labelLimite.TabIndex = 13;
-            labelLimite.Text = "48/69";
+            labelLimite.Text = "0/27";
             // 
             // Classe
             // 
@@ -533,14 +533,6 @@
             modCHA.TabIndex = 42;
             modCHA.Text = "0";
             modCHA.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // Limite
-            // 
-            Limite.Location = new Point(93, 393);
-            Limite.Maximum = 69;
-            Limite.Name = "Limite";
-            Limite.Size = new Size(92, 23);
-            Limite.TabIndex = 12;
             // 
             // label3
             // 
@@ -1118,7 +1110,6 @@
             Controls.Add(labelClasse);
             Controls.Add(Classe);
             Controls.Add(labelLimite);
-            Controls.Add(Limite);
             Controls.Add(labelCHA);
             Controls.Add(labelSAB);
             Controls.Add(labelINT);
@@ -1188,7 +1179,6 @@
         private Label modINT;
         private Label modSAB;
         private Label modCHA;
-        private ProgressBar Limite;
         private Label label3;
         private CheckBox checkSTR;
         private CheckBox checkDEX;
