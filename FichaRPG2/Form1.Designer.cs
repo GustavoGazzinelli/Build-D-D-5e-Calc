@@ -1123,7 +1123,7 @@
             Controls.Add(DEX);
             Controls.Add(STR);
             Name = "Form1";
-            Text = "D&D 5e: Calculando a Porra da build";
+            Text = "D&D 5e: Calculando a build";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)STR).EndInit();
             ((System.ComponentModel.ISupportInitialize)DEX).EndInit();
